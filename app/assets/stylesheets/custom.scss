@@ -4,6 +4,7 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$main-color: ivory;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -15,6 +16,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  background-color: $main-color;
 }
 
 section {
@@ -66,16 +68,27 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: $main-color;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  font-family: serif;
   &:hover {
     color: white;
     text-decoration: none;
   }
 }
+
+/*
+.navbar {
+  background-color: olive;
+}
+
+.dropdown-menu {
+  background-color: ivory;
+}
+*/
 
 /* footer */
 
@@ -239,6 +252,7 @@ input {
   .user {
     margin-top: 5em;
     padding-top: 0;
+    font-weight: bold;
   }
   .content {
     display: block;
