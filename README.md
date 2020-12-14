@@ -1,7 +1,9 @@
 # Micropost App
 
 Railsで作ったTwitter風のアプリ。
+
 テストログインして今すぐ使いはじめることも可能です。
+
 https://micropost-app.herokuapp.com/
 
 ## アプリの機能
