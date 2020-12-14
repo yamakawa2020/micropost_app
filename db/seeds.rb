@@ -1,7 +1,7 @@
 Faker::Config.locale = :ja
 
 User.create!(name:  "育山古 雄座",
-             email: "ippeinogion@yahoo.co.jp",
+             email: "ippei.yamakawa@gmail.com",
              password:              "foobar",
              password_confirmation: "foobar",
              admin: true,
@@ -20,7 +20,7 @@ User.create!(name:  "育山古 雄座",
                activated_at: Time.zone.now)
 end
 
-users = User.order(:created_at).take(4)
+users = User.order(:created_at).take(5)
 50.times do
   users.each { |user| user.microposts.create!(content: Faker::Lorem.sentence(word_count: 5)) }
 end

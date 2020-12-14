@@ -1,10 +1,31 @@
 <% provide(:title, "About") %>
 <h1>About</h1>
-<p>
-  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-  is a <a href="https://railstutorial.jp/#ebook">book</a> and
-  <a href="https://railstutorial.jp/screencast">screencast</a>
-  to teach web development with
-  <a href="https://rubyonrails.org/">Ruby on Rails</a>.
-  This is the sample application for the tutorial.
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <h3 class="center">アプリの機能</h3>
+    <ul class="about-list">
+      <li>画像をふくむ記事の投稿／削除</li>
+      <li>ユーザーのフォロー／アンフォロー</li>
+      <li>フォローしているユーザーの投稿一覧表示</li>
+      <li>ユーザーの登録、ログイン／ログアウト</li>
+      <li>メール認証によるアカウント有効化、パスワード再設定</li>
+      <li>管理者権限を持つユーザーによる他ユーザーの削除</li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <h3 class="center">使用技術等</h3>
+    <ul class="about-list">
+      <li>言語：HTML/CSS, JS(jQuery), Ruby(Rails), SQL</li>
+      <li>DB：SQLite(development)／PostgreSQL(production)</li>
+      <li>開発環境：AWS Cloud9</li>
+      <li>Gitによるバージョン管理</li>
+      <li>単体／統合テスト</li>
+      <li>サーバー：Heroku</li>
+    </ul>
+  </div>
+  <div class="about-note">
+    ※認証用メールを受信するためには予めHerokuアドオンにメールアドレスを登録しておく必要があります。
+  </div>
+</div>
+
+   

@@ -1,42 +1,37 @@
-# Ruby on Rails チュートリアルのサンプルアプリケーション
+# Micropost App
 
-これは、次の教材で作られたサンプルアプリケーションです。
-[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
-（第6版）
-[Michael Hartl](https://www.michaelhartl.com/) 著
+Railsで作ったTwitter風のアプリ。
 
-## ライセンス
+## アプリの機能
 
-[Ruby on Rails チュートリアル](https://railstutorial.jp/)内にある
-ソースコードはMITライセンスとBeerwareライセンスのもとで公開されています。
-詳細は [LICENSE.md](LICENSE.md) をご覧ください。
+- 画像をふくむ記事の投稿／削除
+- ユーザーのフォロー／アンフォロー
+- フォローしているユーザーの投稿一覧表示
+- ユーザーの登録、ログイン／ログアウト
+- メール認証によるアカウント有効化、パスワード再設定
+- 管理者権限を持つユーザーによる他ユーザーの削除
+
+## 使用技術等
+
+- 言語：HTML/CSS, JS(jQuery), Ruby(Rails), SQL
+- DB：SQLite(development)／PostgreSQL(production)
+- 開発環境：AWS Cloud9
+- Gitによるバージョン管理
+- 単体／統合テスト
+- サーバー：Heroku
 
 ## 使い方
 
-このアプリケーションを動かす場合は、まずはリポジトリを手元にクローンしてください。
-その後、次のコマンドで必要になる RubyGems をインストールします。
+リポジトリを手元にクローンし、Gemのインストールとデータベースへのマイグレーションを行う。
 
 ```
 $ bundle install --without production
-```
-
-その後、データベースへのマイグレーションを実行します。
-
-```
 $ rails db:migrate
 ```
 
-最後に、テストを実行してうまく動いているかどうか確認してください。
+テストで挙動を確認し、サーバーを立ち上げる。
 
 ```
 $ rails test
-```
-
-テストが無事に通ったら、Railsサーバーを立ち上げる準備が整っているはずです。
-
-```
 $ rails server
 ```
-
-詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
-を参考にしてください。

@@ -45,6 +45,12 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  font-family: serif;
+  
+  &.sans-serif {
+    font-family: sans-serif;
+    
+  }
 }
 
 h2 {
@@ -89,6 +95,14 @@ p {
   background-color: ivory;
 }
 */
+
+/* body */
+.jumbotron {
+  background-color: $main-color;
+  .btn{
+    margin: 30px 0;
+  }
+}
 
 /* footer */
 
@@ -286,4 +300,20 @@ span.image {
   input {
     border: 0;
   }
+}
+
+/*about*/
+.about-list {
+  margin: 30px 30px;
+  font-size: 1.2em;
+  color: $gray-light;
+  li{
+    margin: 10px 0;
+  }
+}
+
+.about-note {
+  float: right;
+  color: $gray-light;
+  padding-top: 20px;
 }

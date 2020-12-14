@@ -9,9 +9,12 @@ class UserMailerTest < ActionMailer::TestCase
     assert_equal "アカウント有効化", mail.subject
     assert_equal [user.email], mail.to
     assert_equal ["noreply@micropostapp.com"], mail.from
-    assert_match user.name,               mail.body.encoded
-    assert_match user.activation_token,   mail.body.encoded
-    assert_match CGI.escape(user.email),  mail.body.encoded
+    assert_match user.name,               mail.text_part.body.encoded
+    assert_match user.name,               mail.html_part.body.encoded
+    assert_match user.activation_token,   mail.text_part.body.encoded
+    assert_match user.activation_token,   mail.html_part.body.encoded
+    assert_match CGI.escape(user.email),  mail.text_part.body.encoded
+    assert_match CGI.escape(user.email),  mail.html_part.body.encoded
   end
   
   test "password_reset" do
@@ -21,7 +24,9 @@ class UserMailerTest < ActionMailer::TestCase
     assert_equal "パスワード再設定", mail.subject
     assert_equal [user.email], mail.to
     assert_equal ["noreply@micropostapp.com"], mail.from
-    assert_match user.reset_token,        mail.body.encoded
-    assert_match CGI.escape(user.email),  mail.body.encoded
+    assert_match user.reset_token,        mail.text_part.body.encoded
+    assert_match user.reset_token,        mail.html_part.body.encoded
+    assert_match CGI.escape(user.email),  mail.text_part.body.encoded
+    assert_match CGI.escape(user.email),  mail.html_part.body.encoded
   end
 end
