@@ -1,6 +1,8 @@
 # Micropost App
 
 Railsで作ったTwitter風のアプリ。
+テストログインして今すぐ使いはじめることも可能です。
+https://micropost-app.herokuapp.com/
 
 ## アプリの機能
 
@@ -20,7 +22,7 @@ Railsで作ったTwitter風のアプリ。
 - 単体／統合テスト
 - サーバー：Heroku
 
-## 使い方
+## 実行方法
 
 リポジトリを手元にクローンし、Gemのインストールとデータベースへのマイグレーションを行う。
 
